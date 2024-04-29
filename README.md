@@ -45,8 +45,8 @@ To extract brain activity signals associated with processing video-based and pic
 3. ‘RT_protocol_1_Text.xlsx’ – This file also includes three columns (SS Latency, BP Latency, Type), where the first two columns reflect the scene start and button press times.
 4. ‘RT_protocol_1_Video.xlsx’ – This file has the same structure as the RT text protocol but is applied to video-based scenes.
 
-[!NOTE]   
-The purpose of these protocol files is twofold: ‘protocol_1_Text.xlsx’ is used to extract data from the EEG files, while ‘RT_protocol_1_Text.xlsx’ is used for data analysis to account for the response time taken by subjects to respond to each scene.
+>[!NOTE]   
+>The purpose of these protocol files is twofold: ‘protocol_1_Text.xlsx’ is used to extract data from the EEG files, while ‘RT_protocol_1_Text.xlsx’ is used for data analysis to account >for the response time taken by subjects to respond to each scene.
 
 
 
