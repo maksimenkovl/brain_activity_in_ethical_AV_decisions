@@ -65,7 +65,7 @@ Then, we execute the MATLAB file ‘EEG_PREPROCESSING_VIDEO.m’ that performs t
 As a result, the following output files are generated: '1_alpha_Video.mat', '1_theta_Video.mat', and '1_beta_Video.mat' containing time evolution of the wavelet power in three frequency bands at each EEG sensor for each scene. For the picture-based scenes, one should execute MATLAB file ‘EEG_PREPROCESSING_TEXT.m’
 
 >[!NOTE]
->All EEG processing steps are executed using the Fieldtrip toolbox, available for download at https://www.fieldtriptoolbox.org/
+>All EEG processing steps are executed using the Fieldtrip toolbox, available for download at https://www.fieldtriptoolbox.org/.
 >Processing also requires the updated list of EEG channel names ‘CHANS.mat’.
 
 ### Comparing spatial distributions of the wavelet power between picture-based and video-based scenes
@@ -79,8 +79,8 @@ To compare the spatial distributions of the wavelet power between picture-based 
 3. Subsequently, the Python script ‘COMPARE_ERSP_DATA_PICTURE_VS_VIDEO.ipynb’ loads the files ‘ERSP_VIDEO_THETA.csv’, ‘ERSP_VIDEO_ALPHA.csv’, and ‘ERSP_VIDEO_BETA.csv’, as well as ‘ERSP_TEXT_THETA.csv’, ‘ERSP_TEXT_ALPHA.csv’, and ‘ERSP_TEXT_BETA.csv’. It performs the comparison of wavelet power between the picture-based and video-based scenes using statistical tests and permutation-based correction for multiple comparisons.
 
 >[!NOTE]
->This analysis requires the MNE toolbox
->The list of EEG sensor names should be read from file 'EEG_SENSOR_NAMES.xlsx'
+>This analysis requires the MNE toolbox.
+>The list of EEG sensor names should be read from file 'EEG_SENSOR_NAMES.xlsx'.
 
 ### Comparing temporal evolution of the wavelet power between picture-based and video-based scenes
 
@@ -89,8 +89,8 @@ To compare how the temporal evolution of wavelet power differs between picture-b
 These operations are performed by running the Python script ‘COMPARE_ERSP_WAVEFORMS_PICTURE_VS_VIDEO.ipynb’. It reads the preprocessed EEG data of each subject in three frequency bands ('1_theta_Video.mat', '1_alpha_Video.mat', and '1_beta_Video.mat' for video-based scenes, and '1_theta_Text.mat', '1_alpha_Text.mat', and '1_beta_Text.mat' for picture-based scenes) and their corresponding protocols ('RT_protocol_1_Video.xlsx' and 'RT_protocol_1_Text.xlsx').
 
 >[!NOTE]
->This analysis requires the MNE toolbox
->>The list of EEG sensor names should be read from file 'EEG_SENSOR_NAMES.xlsx'
+>This analysis requires the MNE toolbox.
+>>The list of EEG sensor names should be read from file 'EEG_SENSOR_NAMES.xlsx'.
 
 ### Analysing behavioral responses and their correlation with brain signals
 
