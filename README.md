@@ -80,6 +80,7 @@ To compare the spatial distributions of the wavelet power between picture-based 
 
 >[!NOTE]
 >This analysis requires the MNE toolbox
+>The list of EEG sensor names should be read from file 'EEG_SENSOR_NAMES.xlsx'
 
 ### Comparing temporal evolution of the wavelet power between picture-based and video-based scenes
 
@@ -89,6 +90,7 @@ These operations are performed by running the Python script ‘COMPARE_ERSP_WAVE
 
 >[!NOTE]
 >This analysis requires the MNE toolbox
+>>The list of EEG sensor names should be read from file 'EEG_SENSOR_NAMES.xlsx'
 
 ### Analysing behavioral responses and their correlation with brain signals
 
