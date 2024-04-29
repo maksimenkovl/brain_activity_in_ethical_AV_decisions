@@ -30,11 +30,11 @@ Initially, we utilized photo-sensor signals and captured keyboard signals to rec
 
 'TRIGGERS.csv' contains 6 columns:
 
--Participant - unique identifier for the subject
-*Scene Type - type of the scene, either Video or Text
-+Type - scene condition, for example, pedestrians of the same age but different gender (G), pedestrians of the same gender but different age (A), or pedestrians of different ages and genders (AG). There are also control conditions where age and gender remain the same.
-_SS Latency_ - the moment when this scene starts, measured in samples (300 samples per second) from the start of the EEG recording
-_BP Latency_ - the moment when the subject has pressed the button, measured in samples (300 samples per second) from the start of the EEG recording
+1. Participant - unique identifier for the subject
+2. Scene Type - type of the scene, either Video or Text
+3. Type - scene condition, for example, pedestrians of the same age but different gender (G), pedestrians of the same gender but different age (A), or pedestrians of different ages and genders (AG). There are also control conditions where age and gender remain the same.
+4. SS Latency_ - the moment when this scene starts, measured in samples (300 samples per second) from the start of the EEG recording
+5. BP Latency_ - the moment when the subject has pressed the button, measured in samples (300 samples per second) from the start of the EEG recording
 
 ### Creating Separate Protocols for All Subjects
 
