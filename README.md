@@ -94,5 +94,8 @@ These operations are performed by running the Python script ‘COMPARE_ERSP_WAVE
 
 ### Analysing behavioral responses and their correlation with brain signals
 
+Here, we compare behavioral responses between the video and picture-based scenes and explore correlations between these responses and brain activation.
+
+To conduct the analysis, we run the Python script ‘ANALYSIS_OF_CHOICES_AND_CORRELATION_WITH_ERSP.ipynb’. It reads responses from the file ‘RESPONSES.csv’ and wavelet power data from the files ‘ERSP_VIDEO_THETA.csv’, ‘ERSP_VIDEO_ALPHA.csv’, ‘ERSP_VIDEO_BETA.csv’, ‘ERSP_TEXT_THETA.csv’, ‘ERSP_TEXT_ALPHA.csv’, and ‘ERSP_TEXT_BETA.csv’.
 
 
