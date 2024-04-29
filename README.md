@@ -72,3 +72,5 @@ As a result, the following output files are generated: '1_alpha_Video.mat', '1_t
 
 ### Comparing temporal evolution of the wavelet power between picture-based and video-based scenes
 
+### Analysing behavioral responses and their correlation with brain signals
+
