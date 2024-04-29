@@ -90,7 +90,7 @@ These operations are performed by running the Python script ‘COMPARE_ERSP_WAVE
 
 >[!NOTE]
 >This analysis requires the MNE toolbox.
->>The list of EEG sensor names should be read from file 'EEG_SENSOR_NAMES.xlsx'.
+>The list of EEG sensor names should be read from file 'EEG_SENSOR_NAMES.xlsx'.
 
 ### Analysing behavioral responses and their correlation with brain signals
 
