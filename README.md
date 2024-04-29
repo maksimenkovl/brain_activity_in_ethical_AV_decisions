@@ -70,6 +70,14 @@ As a result, the following output files are generated: '1_alpha_Video.mat', '1_t
 
 ### Comparing spatial distributions of the wavelet power between picture-based and video-based scenes
 
+To compare the spatial distributions of the wavelet power between picture-based and video-based scenes, we need to average data across the time interval between the scene start and button press. This information is stored in the protocol files, such as ‘RT_protocol_1_Text.xlsx’. The comparison process is three fold:
+
+1. The Python script ‘FORM_SUBJECT-SPECIFIC_ERSP_DATA_VIDEO.ipynb’ reads the preprocessed EEG data of each subject in three frequency bands (‘1_theta_Video.mat’, ‘1_alpha_Video.mat’, and ‘1_beta_Video.mat’) and their corresponding protocols (‘RT_protocol_1_Text.xlsx’). It then aggregates wavelet power over time and all scenes using the median value and combines the data of all subjects together. As a result, it returns three files: ‘ERSP_VIDEO_THETA.csv’, ‘ERSP_VIDEO_ALPHA.csv’, and ‘ERSP_VIDEO_BETA.csv’. Each file is a 2D array representing values of the wavelet power for a particular frequency band for 40 subjects and all EEG sensors.
+
+2. Similarly, the Python script ‘FORM_SUBJECT-SPECIFIC_ERSP_DATA_PICTURE.ipynb’ performs the same operations for the picture-based scenes and returns three files: ‘ERSP_TEXT_THETA.csv’, ‘ERSP_TEXT_ALPHA.csv’, and ‘ERSP_TEXT_BETA.csv’. Each file is a 2D array representing values of the wavelet power for a particular frequency band for 40 subjects and all EEG sensors.
+
+3. Subsequently, the Python script ‘COMPARE_ERSP_DATA_PICTURE_VS_VIDEO.ipynb’ loads the files ‘ERSP_VIDEO_THETA.csv’, ‘ERSP_VIDEO_ALPHA.csv’, and ‘ERSP_VIDEO_BETA.csv’, as well as ‘ERSP_TEXT_THETA.csv’, ‘ERSP_TEXT_ALPHA.csv’, and ‘ERSP_TEXT_BETA.csv’. It performs the comparison of wavelet power between the picture-based and video-based scenes using statistical tests and permutation-based correction for multiple comparisons.
+
 ### Comparing temporal evolution of the wavelet power between picture-based and video-based scenes
 
 ### Analysing behavioral responses and their correlation with brain signals
