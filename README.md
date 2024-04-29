@@ -51,7 +51,7 @@ To extract brain activity signals associated with processing video-based and pic
 
 At this step, we use files containing raw EEG data (check folder [_raw_eeg_data_](https://github.com/maksimenkovl/brain_activity_in_ethical_AV_decisions/tree/192a72031dcd9d2a03d8ca5abb37a497a490d978/raw_eeg_data)) along with the generated protocols (check them in folder [_protocols_](https://github.com/maksimenkovl/brain_activity_in_ethical_AV_decisions/tree/192a72031dcd9d2a03d8ca5abb37a497a490d978/protocols)). For instance, for the first subject’s video-based scenes, we utilize ‘1_video_raw.edf’ and ‘protocol_1_Video.xlsx’ as the data file and protocol file, respectively.
 
-Then, we execute the MATLAB file ‘EEG_PREPROCESSING_VIDEO.m’ that performs the following processing steps:
+Then, we execute the MATLAB file [EEG_PREPROCESSING_VIDEO.m](https://github.com/maksimenkovl/brain_activity_in_ethical_AV_decisions/blob/f1af8a994671e5747dab142cd3cadb26b3d5937e/EEG_PREPROCESSING_VIDEO.m) that performs the following processing steps:
 
 1. References raw EEG signals to the common average.
 2. Filters all signals using high-pass (4 Hz) and low-pass (30 Hz) filters.
@@ -60,31 +60,31 @@ Then, we execute the MATLAB file ‘EEG_PREPROCESSING_VIDEO.m’ that performs t
 5. Calculates wavelet power in the frequency band of 4–30 Hz using the Morlet wavelet for each trial.
 6. Averages wavelet power across three frequency bands of interest: theta-band (4-8 Hz), alpha-band (8-12 Hz), and beta-band (15-30 Hz).
 
-As a result, the following output files are generated: '1_alpha_Video.mat', '1_theta_Video.mat', and '1_beta_Video.mat' containing time evolution of the wavelet power in three frequency bands at each EEG sensor for each scene. For the picture-based scenes, one should execute MATLAB file ‘EEG_PREPROCESSING_TEXT.m’. The output files can be found in the folder [_preprocessed_eeg_data_](https://github.com/maksimenkovl/brain_activity_in_ethical_AV_decisions/tree/843d33e60d8d8678819172f2fb5bdc20493ebfb7/preprocessed_eeg_data)
+As a result, the following output files are generated: '1_alpha_Video.mat', '1_theta_Video.mat', and '1_beta_Video.mat' containing time evolution of the wavelet power in three frequency bands at each EEG sensor for each scene. For the picture-based scenes, one should execute MATLAB file [EEG_PREPROCESSING_TEXT.m](https://github.com/maksimenkovl/brain_activity_in_ethical_AV_decisions/blob/f1af8a994671e5747dab142cd3cadb26b3d5937e/EEG_PREPROCESSING_TEXT.m). The output files can be found in the folder [_preprocessed_eeg_data_](https://github.com/maksimenkovl/brain_activity_in_ethical_AV_decisions/tree/843d33e60d8d8678819172f2fb5bdc20493ebfb7/preprocessed_eeg_data)
 
 >[!NOTE]
 >All EEG processing steps are executed using the Fieldtrip toolbox, available for download at https://www.fieldtriptoolbox.org/.
->Processing also requires the updated list of EEG channel names ‘CHANS.mat’.
+>Processing also requires the updated list of EEG channel names [CHANS.mat](https://github.com/maksimenkovl/brain_activity_in_ethical_AV_decisions/blob/f1af8a994671e5747dab142cd3cadb26b3d5937e/CHANS.mat).
 
 ### Comparing spatial distributions of the wavelet power between picture-based and video-based scenes
 
 To compare the spatial distributions of the wavelet power between picture-based and video-based scenes, we need to average data across the time interval between the scene start and button press. This information is stored in the protocol files, such as ‘RT_protocol_1_Text.xlsx’. The comparison process is three fold:
 
-1. The Python script ‘FORM_SUBJECT-SPECIFIC_ERSP_DATA_VIDEO.ipynb’ reads the preprocessed EEG data of each subject in three frequency bands (‘1_theta_Video.mat’, ‘1_alpha_Video.mat’, and ‘1_beta_Video.mat’) and their corresponding protocols (‘RT_protocol_1_Text.xlsx’). It then aggregates wavelet power over time and all scenes using the median value and combines the data of all subjects together. As a result, it returns three files: ‘ERSP_VIDEO_THETA.csv’, ‘ERSP_VIDEO_ALPHA.csv’, and ‘ERSP_VIDEO_BETA.csv’. Each file is a 2D array representing values of the wavelet power for a particular frequency band for 40 subjects and all EEG sensors.
+1. The Python script [FORM_SUBJECT-SPECIFIC_ERSP_DATA_VIDEO.ipynb](https://github.com/maksimenkovl/brain_activity_in_ethical_AV_decisions/blob/f1af8a994671e5747dab142cd3cadb26b3d5937e/FORM_SUBJECT-SPECIFIC_ERSP_DATA_VIDEO.ipynb) reads the preprocessed EEG data of each subject in three frequency bands (‘1_theta_Video.mat’, ‘1_alpha_Video.mat’, and ‘1_beta_Video.mat’) and their corresponding protocols (‘RT_protocol_1_Text.xlsx’). It then aggregates wavelet power over time and all scenes using the median value and combines the data of all subjects together. As a result, it returns three files: ‘ERSP_VIDEO_THETA.csv’, ‘ERSP_VIDEO_ALPHA.csv’, and ‘ERSP_VIDEO_BETA.csv’. Each file is a 2D array representing values of the wavelet power for a particular frequency band for 40 subjects and all EEG sensors.
 
-2. Similarly, the Python script ‘FORM_SUBJECT-SPECIFIC_ERSP_DATA_PICTURE.ipynb’ performs the same operations for the picture-based scenes and returns three files: ‘ERSP_TEXT_THETA.csv’, ‘ERSP_TEXT_ALPHA.csv’, and ‘ERSP_TEXT_BETA.csv’. Each file is a 2D array representing values of the wavelet power for a particular frequency band for 40 subjects and all EEG sensors.
+2. Similarly, the Python script [FORM_SUBJECT-SPECIFIC_ERSP_DATA_PICTURE.ipynb](https://github.com/maksimenkovl/brain_activity_in_ethical_AV_decisions/blob/f1af8a994671e5747dab142cd3cadb26b3d5937e/FORM_SUBJECT-SPECIFIC_ERSP_DATA_PICTURE.ipynb) performs the same operations for the picture-based scenes and returns three files: ‘ERSP_TEXT_THETA.csv’, ‘ERSP_TEXT_ALPHA.csv’, and ‘ERSP_TEXT_BETA.csv’. Each file is a 2D array representing values of the wavelet power for a particular frequency band for 40 subjects and all EEG sensors.
 
-3. Subsequently, the Python script ‘COMPARE_ERSP_DATA_PICTURE_VS_VIDEO.ipynb’ loads the files ‘ERSP_VIDEO_THETA.csv’, ‘ERSP_VIDEO_ALPHA.csv’, and ‘ERSP_VIDEO_BETA.csv’, as well as ‘ERSP_TEXT_THETA.csv’, ‘ERSP_TEXT_ALPHA.csv’, and ‘ERSP_TEXT_BETA.csv’. It performs the comparison of wavelet power between the picture-based and video-based scenes using statistical tests and permutation-based correction for multiple comparisons.
+3. Subsequently, the Python script [COMPARE_ERSP_DATA_PICTURE_VS_VIDEO.ipynb](https://github.com/maksimenkovl/brain_activity_in_ethical_AV_decisions/blob/f1af8a994671e5747dab142cd3cadb26b3d5937e/COMPARE_ERSP_DATA_PICTURE_VS_VIDEO.ipynb) loads the files ‘ERSP_VIDEO_THETA.csv’, ‘ERSP_VIDEO_ALPHA.csv’, and ‘ERSP_VIDEO_BETA.csv’, as well as ‘ERSP_TEXT_THETA.csv’, ‘ERSP_TEXT_ALPHA.csv’, and ‘ERSP_TEXT_BETA.csv’. It performs the comparison of wavelet power between the picture-based and video-based scenes using statistical tests and permutation-based correction for multiple comparisons.
 
 >[!NOTE]
 >This analysis requires the MNE toolbox.
->The list of EEG sensor names should be read from file 'EEG_SENSOR_NAMES.xlsx'.
+>The list of EEG sensor names should be read from file [EEG_SENSOR_NAMES.xlsx](https://github.com/maksimenkovl/brain_activity_in_ethical_AV_decisions/blob/f1af8a994671e5747dab142cd3cadb26b3d5937e/EEG_SENSOR_NAMES.xlsx).
 
 ### Comparing temporal evolution of the wavelet power between picture-based and video-based scenes
 
 To compare how the temporal evolution of wavelet power differs between picture-based and video-based scenes, EEG sensors are categorized into four groups based on anatomical regions: frontal, central, occipital+parietal, and temporal. Wavelet power within each region is aggregated using the median value. The resulting waveforms are compared for power between the picture-based and video-based scenes using statistical tests and permutation-based correction for multiple comparisons.
 
-These operations are performed by running the Python script ‘COMPARE_ERSP_WAVEFORMS_PICTURE_VS_VIDEO.ipynb’. It reads the preprocessed EEG data of each subject in three frequency bands ('1_theta_Video.mat', '1_alpha_Video.mat', and '1_beta_Video.mat' for video-based scenes, and '1_theta_Text.mat', '1_alpha_Text.mat', and '1_beta_Text.mat' for picture-based scenes) and their corresponding protocols ('RT_protocol_1_Video.xlsx' and 'RT_protocol_1_Text.xlsx').
+These operations are performed by running the Python script [COMPARE_ERSP_WAVEFORMS_PICTURE_VS_VIDEO.ipynb](https://github.com/maksimenkovl/brain_activity_in_ethical_AV_decisions/blob/f1af8a994671e5747dab142cd3cadb26b3d5937e/COMPARE_ERSP_WAVEFORMS_PICTURE_VS_VIDEO.ipynb). It reads the preprocessed EEG data of each subject in three frequency bands ('1_theta_Video.mat', '1_alpha_Video.mat', and '1_beta_Video.mat' for video-based scenes, and '1_theta_Text.mat', '1_alpha_Text.mat', and '1_beta_Text.mat' for picture-based scenes) and their corresponding protocols ('RT_protocol_1_Video.xlsx' and 'RT_protocol_1_Text.xlsx').
 
 >[!NOTE]
 >This analysis requires the MNE toolbox.
@@ -94,6 +94,6 @@ These operations are performed by running the Python script ‘COMPARE_ERSP_WAVE
 
 Here, we compare behavioral responses between the video and picture-based scenes and explore correlations between these responses and brain activation.
 
-To conduct the analysis, we run the Python script ‘ANALYSIS_OF_CHOICES_AND_CORRELATION_WITH_ERSP.ipynb’. It reads responses from the file ‘RESPONSES.csv’ and wavelet power data from the files ‘ERSP_VIDEO_THETA.csv’, ‘ERSP_VIDEO_ALPHA.csv’, ‘ERSP_VIDEO_BETA.csv’, ‘ERSP_TEXT_THETA.csv’, ‘ERSP_TEXT_ALPHA.csv’, and ‘ERSP_TEXT_BETA.csv’.
+To conduct the analysis, we run the Python script [ANALYSIS_OF_CHOICES_AND_CORRELATION_WITH_ERSP.ipynb](https://github.com/maksimenkovl/brain_activity_in_ethical_AV_decisions/blob/f1af8a994671e5747dab142cd3cadb26b3d5937e/ANALYSIS_OF_CHOICES_AND_CORRELATION%20_WITH_ERSP.ipynb). It reads responses from the file ‘RESPONSES.csv’ and wavelet power data from the files ‘ERSP_VIDEO_THETA.csv’, ‘ERSP_VIDEO_ALPHA.csv’, ‘ERSP_VIDEO_BETA.csv’, ‘ERSP_TEXT_THETA.csv’, ‘ERSP_TEXT_ALPHA.csv’, and ‘ERSP_TEXT_BETA.csv’.
 
 
