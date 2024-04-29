@@ -51,7 +51,7 @@ To extract brain activity signals associated with processing video-based and pic
 
 ### Processing brain activity data for each subject.
 
-At this step, we use files containing raw EEG data (check folder _raw_eeg_data_) along with the generated protocols. For instance, for the first subject’s video-based scenes, we utilize ‘1_video_raw.edf’ and ‘protocol_1_Video.xlsx’ as the data file and protocol file, respectively.
+At this step, we use files containing raw EEG data (check folder _raw_eeg_data_) along with the generated protocols (check them in folder _protocols_). For instance, for the first subject’s video-based scenes, we utilize ‘1_video_raw.edf’ and ‘protocol_1_Video.xlsx’ as the data file and protocol file, respectively.
 
 Then, we execute the MATLAB file ‘EEG_PREPROCESSING_VIDEO.m’ that performs the following processing steps:
 
