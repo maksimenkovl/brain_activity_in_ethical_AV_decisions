@@ -1,10 +1,10 @@
 # brain_activity_in_ethical_AV_decisions
 
-This repo contains scripts and results of the brain signals analysis during making ethical decisions regarding the behavior of autonomous vehicle in unavoidable crush situation. Data are relevant to the research article {\bf Video-Based Experiments Better Unveil Societal Biases Towards AI’s Ethical Decisions}.
+This repo contains scripts and results of the brain signals analysis during making ethical decisions regarding the behavior of autonomous vehicle in unavoidable crush situation. Data are relevant to the research article **Video-Based Experiments Better Unveil Societal Biases Towards AI’s Ethical Decisions**.
 
-Information about the study design and registered data
+## Information about the study design and registered data
 
-1.1.	Introduction to experimental design.
+### Introduction to experimental design.
 
 40 subjects (20 females) took part in two experimental sessions: picture-based and video-based in succession, with a 5-minute break between them. The order of sessions was randomized across subjects so that 20 subjects started with the picture-based scenes, while the remaining 20 subjects started with the video-based scenes.
 
@@ -14,11 +14,11 @@ In the video-based scene, subjects engaged in an interactive video featuring for
 
 Both picture-based and video-based scenes followed the same protocol. The subject was shown a total of 32 scenes (16 unique scenes, each repeated twice), one after another, in a randomized order with randomly varying gender and age of pedestrians. The order of scenes was randomized for each subject. There was a 2-minute black screen before the onset of the first scene to record the subject's rest-state brain activity. Once the subject finished the scene, it turned into a 4- to 6-second-long black screen before transitioning to the next scene. 
 
-1.2.	Information about registration of behavioural metrics
+### Information about registration of behavioural metrics
 
 In both picture-based and video-based scenes, we recorded the scene-start time using the photo sensor placed in the upper left corner of the screen. Additionally, we captured keyboard signals, noting the time when subjects pressed the button and recording their choices. Furthermore, we documented information about each scene, including the gender and age of pedestrians on the left and right sides, as well as the initial location of the AV. Response time (RT) was defined as the time elapsed from the scene's start to the moment when the subject pressed the button. 
 
-1.3.	Information about brain signals registration
+### Information about brain signals registration
 
 We recorded brain activity signals using multichannel electroencephalography (EEG) with 18 dry EEG sensors (P3, C3, F3, Fz, F4, C4, P4, Cz, Fp1, Fp2, T3, T5, O1, O2, F7, F8, T6, T4) arranged according to the standard 10-10 scheme. The Pz channel served as a common-mode follower. 
 ![image](https://github.com/maksimenkovl/brain_activity_in_ethical_AV_decisions/assets/123208265/b928d5a0-577e-4182-92aa-45609a6003e6)
