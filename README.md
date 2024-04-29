@@ -78,7 +78,17 @@ To compare the spatial distributions of the wavelet power between picture-based 
 
 3. Subsequently, the Python script ‘COMPARE_ERSP_DATA_PICTURE_VS_VIDEO.ipynb’ loads the files ‘ERSP_VIDEO_THETA.csv’, ‘ERSP_VIDEO_ALPHA.csv’, and ‘ERSP_VIDEO_BETA.csv’, as well as ‘ERSP_TEXT_THETA.csv’, ‘ERSP_TEXT_ALPHA.csv’, and ‘ERSP_TEXT_BETA.csv’. It performs the comparison of wavelet power between the picture-based and video-based scenes using statistical tests and permutation-based correction for multiple comparisons.
 
+>[!NOTE]
+>This analysis requires the MNE toolbox
+
 ### Comparing temporal evolution of the wavelet power between picture-based and video-based scenes
+
+To compare how the temporal evolution of wavelet power differs between picture-based and video-based scenes, EEG sensors are categorized into four groups based on anatomical regions: frontal, central, occipital+parietal, and temporal. Wavelet power within each region is aggregated using the median value. The resulting waveforms are compared for power between the picture-based and video-based scenes using statistical tests and permutation-based correction for multiple comparisons.
+
+These operations are performed by running the Python script ‘COMPARE_ERSP_WAVEFORMS_PICTURE_VS_VIDEO.ipynb’. It reads the preprocessed EEG data of each subject in three frequency bands ('1_theta_Video.mat', '1_alpha_Video.mat', and '1_beta_Video.mat' for video-based scenes, and '1_theta_Text.mat', '1_alpha_Text.mat', and '1_beta_Text.mat' for picture-based scenes) and their corresponding protocols ('RT_protocol_1_Video.xlsx' and 'RT_protocol_1_Text.xlsx').
+
+>[!NOTE]
+>This analysis requires the MNE toolbox
 
 ### Analysing behavioral responses and their correlation with brain signals
 
