@@ -21,3 +21,29 @@ In both picture-based and video-based scenes, we recorded the scene-start time u
 ### Information about brain signals registration
 
 We recorded brain activity signals using multichannel electroencephalography (EEG) with 18 dry EEG sensors (P3, C3, F3, Fz, F4, C4, P4, Cz, Fp1, Fp2, T3, T5, O1, O2, F7, F8, T6, T4) arranged according to the standard 10-10 scheme. The Pz channel served as a common-mode follower. 
+
+## Data processing
+
+### Collecting timings of all scenes
+
+Initially, we utilized photo-sensor signals and captured keyboard signals to record the timestamps of each scene's onset and when the subjects pressed a button. These timestamps are collected for all subjects and scenes and stored in 'TRIGGERS.csv'.
+
+'TRIGGERS.csv' contains 6 columns:
+Participant - unique identifier for the subject
+Scene Type - type of the scene, either Video or Text
+Type - scene condition, for example, pedestrians of the same age but different gender (G), pedestrians of the same gender but different age (A), or pedestrians of different ages and genders (AG). There are also control conditions where age and gender remain the same.
+SS Latency - the moment when this scene starts, measured in samples (300 samples per second) from the start of the EEG recording
+BP Latency - the moment when the subject has pressed the button, measured in samples (300 samples per second) from the start of the EEG recording
+
+### Creating Separate Protocols for All Subjects
+
+To extract brain activity signals associated with processing video-based and picture-based scenes, we need to create protocol files containing timestamps of these intervals and apply them to EEG data. To create these protocol files, we use the script ‘MAKE_PROTOCOLS_TO_EXTRACT_SCENES.ipynb’. This script utilizes data from 'TRIGGERS.csv' to create four output files for each subject. For example, for subject 1, these files are:
+
+‘protocol_1_Text.xlsx’ – This file includes three columns (SS Latency, SS Latency2, Shift), where the first two columns reflect the boundaries of the interval to be extracted. The left boundary corresponds to 4 seconds before the scene onset, and the right boundary is 10 seconds after the scene onset.
+‘protocol_1_Video.xlsx’ – This file has the same structure as the text protocol but is applied to the video-based scenes. We use separate files because brain activity is recorded separately for picture-based and video-based scenes.
+‘RT_protocol_1_Text.xlsx’ – This file also includes three columns (SS Latency, BP Latency, Type), where the first two columns reflect the scene start and button press times.
+‘RT_protocol_1_Video.xlsx’ – This file has the same structure as the RT text protocol but is applied to video-based scenes.
+The purpose of these protocol files is twofold: ‘protocol_1_Text.xlsx’ is used to extract data from the EEG files, while ‘RT_protocol_1_Text.xlsx’ is used for data analysis to account for the response time taken by subjects to respond to each scene.
+
+
+
