@@ -46,12 +46,12 @@ To extract brain activity signals associated with processing video-based and pic
 4. ‘RT_protocol_1_Video.xlsx’ – This file has the same structure as the RT text protocol but is applied to video-based scenes.
 
 >[!NOTE]   
->The purpose of these protocol files is twofold: ‘protocol_1_Text.xlsx’ is used to extract data from the EEG files (one can find these protocols in the folder _protocols_), while ‘RT_protocol_1_Text.xlsx’ is used for data analysis to account for the response time taken by subjects to respond to each scene (these protocols can be found in the folder _protocols_with_response_time_).
+>The purpose of these protocol files is twofold: ‘protocol_1_Text.xlsx’ is used to extract data from the EEG files (one can find these protocols in the folder [_protocols_](https://github.com/maksimenkovl/brain_activity_in_ethical_AV_decisions/tree/192a72031dcd9d2a03d8ca5abb37a497a490d978/protocols)), while ‘RT_protocol_1_Text.xlsx’ is used for data analysis to account for the response time taken by subjects to respond to each scene (these protocols can be found in the folder _protocols_with_response_time_).
 
 
 ### Processing brain activity data for each subject.
 
-At this step, we use files containing raw EEG data (check folder [_raw_eeg_data_](https://github.com/maksimenkovl/brain_activity_in_ethical_AV_decisions\raw_eeg_data)) along with the generated protocols (check them in folder [_protocols_](https://github.com/maksimenkovl/brain_activity_in_ethical_AV_decisions\protocols)). For instance, for the first subject’s video-based scenes, we utilize ‘1_video_raw.edf’ and ‘protocol_1_Video.xlsx’ as the data file and protocol file, respectively.
+At this step, we use files containing raw EEG data (check folder [_raw_eeg_data_](https://github.com/maksimenkovl/brain_activity_in_ethical_AV_decisions/tree/192a72031dcd9d2a03d8ca5abb37a497a490d978/raw_eeg_data)) along with the generated protocols (check them in folder [_protocols_](https://github.com/maksimenkovl/brain_activity_in_ethical_AV_decisions/tree/192a72031dcd9d2a03d8ca5abb37a497a490d978/protocols)). For instance, for the first subject’s video-based scenes, we utilize ‘1_video_raw.edf’ and ‘protocol_1_Video.xlsx’ as the data file and protocol file, respectively.
 
 Then, we execute the MATLAB file ‘EEG_PREPROCESSING_VIDEO.m’ that performs the following processing steps:
 
