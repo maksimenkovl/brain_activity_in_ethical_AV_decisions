@@ -26,9 +26,7 @@ We recorded brain activity signals using multichannel electroencephalography (EE
 
 ### Collecting timings of all scenes
 
-Initially, we utilized photo-sensor signals and captured keyboard signals to record the timestamps of each scene's onset and when the subjects pressed a button. These timestamps are collected for all subjects and scenes and stored in 'TRIGGERS.csv'.
-
-'TRIGGERS.csv' contains 6 columns:
+Initially, we utilized photo-sensor signals and captured keyboard signals to record the timestamps of each scene's onset and when the subjects pressed a button. These timestamps are collected for all subjects and scenes and stored in [TRIGGERS.csv](https://github.com/maksimenkovl/brain_activity_in_ethical_AV_decisions/blob/d2c03b08f639451969fd4ebfacdad3c376477d49/TRIGGERS.csv) which contains 6 columns:
 
 1. **Participant** - unique identifier for the subject
 2. **Scene Type** - type of the scene, either Video or Text
