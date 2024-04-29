@@ -49,7 +49,7 @@ To extract brain activity signals associated with processing video-based and pic
 >The purpose of these protocol files is twofold: ‘protocol_1_Text.xlsx’ is used to extract data from the EEG files, while ‘RT_protocol_1_Text.xlsx’ is used for data analysis to account >for the response time taken by subjects to respond to each scene.
 
 
-### Process brain activity data for each subject.
+### Processing brain activity data for each subject.
 
 At this step, we use files containing raw EEG data along with the generated protocols. For instance, for the first subject’s video-based scenes, we utilize ‘1_video_raw.edf’ and ‘protocol_1_Video.xlsx’ as the data file and protocol file, respectively.
 
@@ -57,7 +57,7 @@ Then, we execute the MATLAB file ‘EEG_PREPROCESSING_VIDEO.m’ that performs t
 
 1. References raw EEG signals to the common average.
 2. Filters all signals using high-pass (4 Hz) and low-pass (30 Hz) filters.
-3. Performs an independent component analysis using the "runica" algorithm to remove eye-blinking artifacts.
+3. Performs an independent component analysis using the "runica" algorithm to remove eye-blinking artifacts. It requires visual inspection of data.
 4. Segments the EEG signals into 16-second trials, time-locked to the scene start, including a 4-second interval before and a 12-second interval after this point.
 5. Calculates wavelet power in the frequency band of 4–30 Hz using the Morlet wavelet for each trial.
 6. Averages wavelet power across three frequency bands of interest: theta-band (4-8 Hz), alpha-band (8-12 Hz), and beta-band (15-30 Hz).
@@ -68,5 +68,7 @@ As a result, the following output files are generated: '1_alpha_Video.mat', '1_t
 >All EEG processing steps are executed using the Fieldtrip toolbox, available for download at https://www.fieldtriptoolbox.org/
 >Processing also requires the updated list of EEG channel names ‘CHANS.mat’.
 
+### Comparing spatial distributions of the wavelet power between picture-based and video-based scenes
 
+### Comparing temporal evolution of the wavelet power between picture-based and video-based scenes
 
