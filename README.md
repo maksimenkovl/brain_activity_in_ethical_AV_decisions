@@ -88,12 +88,12 @@ These operations are performed by running the Python script [COMPARE_ERSP_WAVEFO
 
 >[!NOTE]
 >This analysis requires the MNE toolbox.
->The list of EEG sensor names should be read from file 'EEG_SENSOR_NAMES.xlsx'.
+>The list of EEG sensor names should be read from file [EEG_SENSOR_NAMES.xlsx](https://github.com/maksimenkovl/brain_activity_in_ethical_AV_decisions/blob/aaa5aca10291f2d263ced5bef3e6a20e54f956e9/EEG_SENSOR_NAMES.xlsx).
 
 ### Analysing behavioral responses and their correlation with brain signals
 
 Here, we compare behavioral responses between the video and picture-based scenes and explore correlations between these responses and brain activation.
 
-To conduct the analysis, we run the Python script [ANALYSIS_OF_CHOICES_AND_CORRELATION_WITH_ERSP.ipynb](https://github.com/maksimenkovl/brain_activity_in_ethical_AV_decisions/blob/f1af8a994671e5747dab142cd3cadb26b3d5937e/ANALYSIS_OF_CHOICES_AND_CORRELATION%20_WITH_ERSP.ipynb). It reads responses from the file ‘RESPONSES.csv’ and wavelet power data from the files ‘ERSP_VIDEO_THETA.csv’, ‘ERSP_VIDEO_ALPHA.csv’, ‘ERSP_VIDEO_BETA.csv’, ‘ERSP_TEXT_THETA.csv’, ‘ERSP_TEXT_ALPHA.csv’, and ‘ERSP_TEXT_BETA.csv’.
+To conduct the analysis, we run the Python script [ANALYSIS_OF_CHOICES_AND_CORRELATION_WITH_ERSP.ipynb](https://github.com/maksimenkovl/brain_activity_in_ethical_AV_decisions/blob/f1af8a994671e5747dab142cd3cadb26b3d5937e/ANALYSIS_OF_CHOICES_AND_CORRELATION%20_WITH_ERSP.ipynb). It reads responses from the file [RESPONSES.csv](https://github.com/maksimenkovl/brain_activity_in_ethical_AV_decisions/blob/aaa5aca10291f2d263ced5bef3e6a20e54f956e9/RESPONSES.csv) and wavelet power data from the files ‘ERSP_VIDEO_THETA.csv’, ‘ERSP_VIDEO_ALPHA.csv’, ‘ERSP_VIDEO_BETA.csv’, ‘ERSP_TEXT_THETA.csv’, ‘ERSP_TEXT_ALPHA.csv’, and ‘ERSP_TEXT_BETA.csv’.
 
 
