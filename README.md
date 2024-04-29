@@ -82,3 +82,5 @@ To compare the spatial distributions of the wavelet power between picture-based 
 
 ### Analysing behavioral responses and their correlation with brain signals
 
+
+
