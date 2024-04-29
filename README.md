@@ -29,11 +29,12 @@ We recorded brain activity signals using multichannel electroencephalography (EE
 Initially, we utilized photo-sensor signals and captured keyboard signals to record the timestamps of each scene's onset and when the subjects pressed a button. These timestamps are collected for all subjects and scenes and stored in 'TRIGGERS.csv'.
 
 'TRIGGERS.csv' contains 6 columns:
-Participant - unique identifier for the subject
-Scene Type - type of the scene, either Video or Text
-Type - scene condition, for example, pedestrians of the same age but different gender (G), pedestrians of the same gender but different age (A), or pedestrians of different ages and genders (AG). There are also control conditions where age and gender remain the same.
-SS Latency - the moment when this scene starts, measured in samples (300 samples per second) from the start of the EEG recording
-BP Latency - the moment when the subject has pressed the button, measured in samples (300 samples per second) from the start of the EEG recording
+
+_Participant_ - unique identifier for the subject
+_Scene Type_ - type of the scene, either Video or Text
+_Type_ - scene condition, for example, pedestrians of the same age but different gender (G), pedestrians of the same gender but different age (A), or pedestrians of different ages and genders (AG). There are also control conditions where age and gender remain the same.
+_SS Latency_ - the moment when this scene starts, measured in samples (300 samples per second) from the start of the EEG recording
+_BP Latency_ - the moment when the subject has pressed the button, measured in samples (300 samples per second) from the start of the EEG recording
 
 ### Creating Separate Protocols for All Subjects
 
