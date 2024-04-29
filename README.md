@@ -62,7 +62,7 @@ Then, we execute the MATLAB file ‘EEG_PREPROCESSING_VIDEO.m’ that performs t
 5. Calculates wavelet power in the frequency band of 4–30 Hz using the Morlet wavelet for each trial.
 6. Averages wavelet power across three frequency bands of interest: theta-band (4-8 Hz), alpha-band (8-12 Hz), and beta-band (15-30 Hz).
 
-As a result, the following output files are generated: '1_alpha_Video.mat', '1_theta_Video.mat', and '1_beta_Video.mat' containing time evolution of the wavelet power in three frequency bands at each EEG sensor for each scene. For the picture-based scenes, one should execute MATLAB file ‘EEG_PREPROCESSING_TEXT.m’
+As a result, the following output files are generated: '1_alpha_Video.mat', '1_theta_Video.mat', and '1_beta_Video.mat' containing time evolution of the wavelet power in three frequency bands at each EEG sensor for each scene. For the picture-based scenes, one should execute MATLAB file ‘EEG_PREPROCESSING_TEXT.m’. The output files can be found in the folder _preprocessed_eeg_data_
 
 >[!NOTE]
 >All EEG processing steps are executed using the Fieldtrip toolbox, available for download at https://www.fieldtriptoolbox.org/.
