@@ -1,6 +1,6 @@
 # brain_activity_in_ethical_AV_decisions
 
-This repo contains scripts and results of the brain signals analysis during making ethical decisions regarding the behavior of autonomous vehicle in unavoidable crush situation. Data are relevant to the research article # Video-Based Experiments Better Unveil Societal Biases Towards AI’s Ethical Decisions.
+This repo contains scripts and results of the brain signals analysis during making ethical decisions regarding the behavior of autonomous vehicle in unavoidable crush situation. Data are relevant to the research article {\bf Video-Based Experiments Better Unveil Societal Biases Towards AI’s Ethical Decisions}.
 
 Information about the study design and registered data
 
